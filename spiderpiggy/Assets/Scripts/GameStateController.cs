@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateController : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class GameStateController : MonoBehaviour
             if(sceneComponent.transform.position.x <= player.transform.position.x - sceneElementWidth*2){
                 Destroy(sceneComponent);
             }
+        }
+
+        //If the player has fallen out of the Game
+        if(player.transform.position.y <= -40){
+            SceneManager.LoadScene("MaxTestGameOver");
         }
     }
 }
