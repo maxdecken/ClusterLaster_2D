@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRigidbody = null;
     [SerializeField] private float strenghtMove = 10;
     [SerializeField] private float strenghtJump = 100;
+    [SerializeField] private ForceMode2D forceModeMovement = ForceMode2D.Force;
     private int jumpesInRow = 0;
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,12 @@ public class Player : MonoBehaviour
         }
         //Move Left
         if(Input.GetKey(KeyCode.A)){
-            playerRigidbody.AddForce(new Vector2(-strenghtMove, 0f));
+            playerRigidbody.AddForce(new Vector2(-strenghtMove, 0f), forceModeMovement);
             jumpesInRow = 0;
         }
         //Move Right
         if(Input.GetKey(KeyCode.D)){
-            playerRigidbody.AddForce(new Vector2(strenghtMove, 0f));
+            playerRigidbody.AddForce(new Vector2(strenghtMove, 0f), forceModeMovement);
             jumpesInRow = 0;
         }
     }
