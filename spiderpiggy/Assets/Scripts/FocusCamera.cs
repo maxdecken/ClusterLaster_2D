@@ -6,6 +6,7 @@ public class FocusCamera : MonoBehaviour
 {
     [SerializeField] GameObject player = null;
     [SerializeField] public float speed = 0;
+    private float lastPosX = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,9 @@ public class FocusCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z), speed * Time.deltaTime);
+        if(lastPosX < player.transform.position.x){
+            lastPosX = player.transform.position.x;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(lastPosX, player.transform.position.y, transform.position.z), speed * Time.deltaTime);
     }
 }

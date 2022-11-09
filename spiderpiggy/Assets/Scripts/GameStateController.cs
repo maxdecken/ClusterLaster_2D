@@ -19,7 +19,7 @@ public class GameStateController : MonoBehaviour
     void Update()
     {
         //Add new SceneElement if needed (only working in the right movement direction)
-        if(player.transform.position.x >= latestPositionAdded + (sceneElementWidth/4)){
+        if(player.transform.position.x >= latestPositionAdded){
             int newPos = latestPositionAdded + sceneElementWidth;
             Instantiate(sceneComponentPrefab, new Vector2(newPos, 0), Quaternion.identity);
             latestPositionAdded = newPos;
