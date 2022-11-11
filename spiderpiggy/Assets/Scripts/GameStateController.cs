@@ -30,7 +30,7 @@ public class GameStateController : MonoBehaviour
             int randomComponent = -1;
             do
             {
-                randomComponent = Random.Range(0, sceneComponentPrefab.Length-1);
+                randomComponent = Random.Range(0, sceneComponentPrefab.Length);
             }
             while(lastComponentAdded == randomComponent);
 
