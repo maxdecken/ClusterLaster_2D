@@ -20,6 +20,9 @@ public class HookAnchor : MonoBehaviour
     private int layermaskToHit;
     
     [SerializeField] private GameObject hitSquareBetween = null;
+
+    
+    private Animator playerAnimator;
     
     
     
@@ -28,6 +31,7 @@ public class HookAnchor : MonoBehaviour
     {
         playerHitBox = GetComponent<BoxCollider2D>();
         layermaskToHit = 1 << LayerMask.NameToLayer("Hookable");
+        playerAnimator = GetComponent<Animator>();
         Debug.Log(layermaskToHit);
     }
 
@@ -45,12 +49,16 @@ public class HookAnchor : MonoBehaviour
                 currentHook.GetComponent<Rope>().hookTarget = hookTarget;
 
                 ropeIsActive = true;
+
+                playerAnimator.SetBool("isSwinging", true);
             }
             else
             {
                 Destroy(currentHook);
                 
                 ropeIsActive = false;
+
+                playerAnimator.SetBool("isSwinging", false);
             }
         }
         

@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float strenghtMove = 10;
     [SerializeField] private float strenghtJump = 100;
     [SerializeField] private ForceMode2D forceModeMovement = ForceMode2D.Force;
+
+    private Animator playerAnimator;
     private int jumpesInRow = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,11 +31,16 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.A)){
             playerRigidbody.AddForce(new Vector2(-strenghtMove, 0f), forceModeMovement);
             jumpesInRow = 0;
+            playerAnimator.SetBool("isRolling", true);
         }
         //Move Right
-        if(Input.GetKey(KeyCode.D)){
+        else if(Input.GetKey(KeyCode.D)){
             playerRigidbody.AddForce(new Vector2(strenghtMove, 0f), forceModeMovement);
             jumpesInRow = 0;
+            playerAnimator.SetBool("isRolling", true);
+        }
+        else {
+            playerAnimator.SetBool("isRolling", false);
         }
     }
 }
