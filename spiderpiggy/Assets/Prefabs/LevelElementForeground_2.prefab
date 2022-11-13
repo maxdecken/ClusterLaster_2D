@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8473949463931100737}
   - component: {fileID: 2211940523662401094}
   - component: {fileID: 6967457712519782430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3487,7 +3487,7 @@ GameObject:
   - component: {fileID: 5175446952797315273}
   - component: {fileID: 574917537552080394}
   - component: {fileID: 27447984181031398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4291,7 +4291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 890637740294918441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LevelElementForeground_2
   m_TagString: SceneComponent
   m_Icon: {fileID: 0}
@@ -4324,7 +4324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4401171551969593383}
   - component: {fileID: 1863949491940612403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4372,7 +4372,7 @@ GameObject:
   - component: {fileID: 6811617924554513099}
   - component: {fileID: 58265437126430901}
   - component: {fileID: 6461875457062219649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
