@@ -65,7 +65,7 @@ public class GameStateController : MonoBehaviour
 
         //If the player has fallen out of the Game
         if(player.transform.position.y <= -40){
-            SceneManager.LoadScene("MaxTestGameOver");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
