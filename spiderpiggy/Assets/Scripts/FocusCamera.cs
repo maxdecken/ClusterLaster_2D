@@ -19,6 +19,6 @@ public class FocusCamera : MonoBehaviour
         if(lastPosX < player.transform.position.x){
             lastPosX = player.transform.position.x;
         }
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(lastPosX, player.transform.position.y, transform.position.z), speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(lastPosX, transform.position.y, transform.position.z), speed * Time.deltaTime);
     }
 }
