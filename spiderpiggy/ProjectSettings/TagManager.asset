@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SceneComponent
   - SceneComponentBackground
+  - Rope
+  - Enemy
   layers:
   - Default
   - TransparentFX
