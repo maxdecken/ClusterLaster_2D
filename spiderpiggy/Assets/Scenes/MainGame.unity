@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2575f5ad2649a1478199b96e1514e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 825199972}
+  player: {fileID: 1835051740}
   sceneComponentPrefab:
   - {fileID: 4055257277025607823, guid: 10606d21b31c67047861a8739987a2ba, type: 3}
   - {fileID: 4026218836077662447, guid: 5e29ed31ff1060d4db621040a9e52652, type: 3}

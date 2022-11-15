@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -6080,12 +6116,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Buildings_88: -2002944732
-      Buildings_93: 1325177676
       Buildings_133: -1182197524
       Buildings_171: 1008042446
       Buildings_262: -825430623
       Buildings_152: -1212021306
       Buildings_279: 997413213
+      Buildings_134: -2121458086
       Buildings_22: -2061052095
       Buildings_92: 872328000
       Buildings_222: -1462966363
@@ -6151,10 +6187,10 @@ TextureImporter:
       Buildings_42: -250958123
       Buildings_105: -1675927659
       Buildings_122: -334023015
-      Buildings_198: -970021316
+      Buildings_228: 2065815940
       Buildings_158: -1128543046
       Buildings_176: 1721807192
-      Buildings_228: 2065815940
+      Buildings_198: -970021316
       Buildings_216: -1964955016
       Buildings_201: -2011653583
       Buildings_264: -2010512722
@@ -6216,29 +6252,30 @@ TextureImporter:
       Buildings_98: 1753968996
       Buildings_208: -814540161
       Buildings_38: -1957374164
-      Buildings_68: -879087980
+      Buildings_223: -1064344097
       Buildings_40: -651381372
-      Buildings_125: -231387082
+      Buildings_68: -879087980
       Buildings_184: 1832875469
       Buildings_140: -1631391371
-      Buildings_153: -424984286
+      Buildings_245: 1640680465
       Buildings_18: 478852268
       Buildings_215: 783382052
       Buildings_78: -1301289097
       Buildings_138: -74499951
-      Buildings_247: 1891676410
-      Buildings_245: 1640680465
-      Buildings_223: -1064344097
+      Buildings_153: -424984286
+      Buildings_256: -1354377262
+      Buildings_244: -1547627453
       Buildings_188: -1934261439
-      Buildings_239: -1914257504
+      Buildings_125: -231387082
       Buildings_111: -1035665520
       Buildings_178: -1222757076
       Buildings_53: 567519227
-      Buildings_147: 240768178
-      Buildings_127: -1775054106
-      Buildings_186: 335409232
       Buildings_225: -1870930440
-      Buildings_244: -1547627453
+      Buildings_127: -1775054106
+      Buildings_147: 240768178
+      Buildings_239: -1914257504
+      Buildings_277: -2009971708
+      Buildings_186: 335409232
       Buildings_126: -1306871345
       Buildings_132: 737229517
       Buildings_253: 1361444040
@@ -6246,15 +6283,14 @@ TextureImporter:
       Buildings_190: -683495007
       Buildings_261: -456324194
       Buildings_204: 1215813169
+      Buildings_247: 1891676410
       Buildings_39: -834348434
       Buildings_23: -1718353567
-      Buildings_256: -1354377262
       Buildings_265: -1349014502
       Buildings_41: 1385824560
       Buildings_114: 1348747007
       Buildings_131: -1792499444
       Buildings_246: -1250762367
-      Buildings_277: -2009971708
       Buildings_77: -924385889
       Buildings_3: -929619493
       Buildings_90: 2114998723
@@ -6362,7 +6398,7 @@ TextureImporter:
       Buildings_72: 1339109745
       Buildings_271: 1449279287
       Buildings_32: -1520821678
-      Buildings_134: -2121458086
+      Buildings_93: 1325177676
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
