@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public float speed = -3.0f;
+    private Rigidbody2D rb;
+    private Vector3 enemyPos;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        rb.velocity = new Vector2(speed, 2 * Mathf.Sin(Time.time * 3));
+
+        enemyPos = Camera.main.WorldToScreenPoint(transform.position);
     }
     
     public void OnTriggerEnter2D(Collider2D other)
