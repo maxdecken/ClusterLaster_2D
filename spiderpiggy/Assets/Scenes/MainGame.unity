@@ -1702,8 +1702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 1835051743}
-  strenghtMove: 10
-  strenghtJump: 100
+  strenghtMove: 5
+  strenghtJump: 10
   forceModeMovement: 0
 --- !u!61 &1835051742
 BoxCollider2D:
