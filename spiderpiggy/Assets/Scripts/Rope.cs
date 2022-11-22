@@ -9,7 +9,7 @@ using System.Linq;
 public class Rope : MonoBehaviour
 {
     [SerializeField] float speed = 0.6f;
-    [SerializeField] float distance = 0.8f;
+    [SerializeField] float distance = 1.8f;
 
     [SerializeField] GameObject RopePivotPrefab;
     [SerializeField] GameObject player;
@@ -68,8 +68,8 @@ public class Rope : MonoBehaviour
         {
             vectorToHook = hookTarget- (Vector2)player.transform.position;
             
-            RopePivot.GetComponent<Rigidbody2D>().AddForce(new Vector2(vectorToHook.x*30,  vectorToHook.y*30));
-            //playerRigidbody.AddForce(new Vector2(vectorToHook.x*30,  vectorToHook.y*30));
+            RopePivot.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,  vectorToHook.y*20));
+            playerRigidbody.AddForce(new Vector2(-vectorToHook.x*30,  vectorToHook.y*30));
             Debug.Log("piggy: " + (Vector2)player.transform.position);
             Debug.Log("hook: " + hookTarget);
             Debug.Log("vektor: " + vectorToHook);
@@ -93,6 +93,7 @@ public class Rope : MonoBehaviour
         }
 
         lineRenderer.SetPosition(i, player.transform.position);
+        //playerRigidbody.AddForce(new Vector2(0,  vectorToHook.y*300));
     }
 
     void CreateRopePivot()

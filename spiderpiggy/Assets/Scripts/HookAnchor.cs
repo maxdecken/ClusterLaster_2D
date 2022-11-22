@@ -8,7 +8,7 @@ public class HookAnchor : MonoBehaviour
     [SerializeField] SpriteRenderer targetSprite;
     [SerializeField] Transform target;
     private Vector2 hookTarget;
-    private float maxDistance = 20f;
+    private float maxDistance = 30f;
     public GameObject hook;
 
     private GameObject currentHook;
@@ -81,8 +81,6 @@ public class HookAnchor : MonoBehaviour
         
         targetPosition = new Vector3(x, y, 0);
         target.transform.position = targetPosition;
-        
-        
         
         
         if (!targetSprite.enabled)
