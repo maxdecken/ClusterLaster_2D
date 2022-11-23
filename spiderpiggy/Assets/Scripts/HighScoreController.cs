@@ -6,29 +6,60 @@ using TMPro;
 public class HighScoreController : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText = null;
+    [SerializeField] private TMP_Text scoreBoosterActiveText = null;
     [SerializeField] private Transform playerPosition = null;
     [SerializeField] private int scoreDivisor = 5;
-    private float highestXValue = 0;
+    [SerializeField] private float scoreBoostActiveSec = 15f;
+    private int currentMulipyler = 1;
+    private float currentMulipylerAddedTime = -1;
+    private float latestPosition = 0;
+    private float scoreValue = 0;
     private bool gameRunning = false;
     
     // Start is called before the first frame update
     void Start()
     {
         gameRunning = true;
-        scoreText.text = "Score: " + ((int) (playerPosition.position.x / scoreDivisor));
+        latestPosition = playerPosition.position.x;
+        scoreText.text = "Score: " + ((int) scoreValue);
+        scoreBoosterActiveText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(gameRunning && playerPosition.position.x > highestXValue){
-            highestXValue = playerPosition.position.x;
-            scoreText.text = "Score: " + ((int) (highestXValue / scoreDivisor));
+        //Handle the muliplyer and degrade over time
+        if(gameRunning && currentMulipyler > 1){
+            if(Time.time - currentMulipylerAddedTime >= scoreBoostActiveSec){
+                currentMulipyler --;
+                if(currentMulipyler > 1){
+                    currentMulipylerAddedTime = Time.time;
+                    scoreBoosterActiveText.text = "SCORE BOOST " + currentMulipyler + "x";
+                }else{
+                    scoreBoosterActiveText.gameObject.SetActive(false);
+                }
+            }
+        }
+
+        //Calc current Score
+        if(gameRunning && playerPosition.position.x > latestPosition){
+            float distance = playerPosition.position.x - latestPosition;
+            latestPosition = playerPosition.position.x;
+            scoreValue += (distance/scoreDivisor) * currentMulipyler;
+            scoreText.text = "Score: " + ((int) scoreValue);
         }
     }
 
+    
+    public void scoreBooster(){
+        currentMulipyler ++;
+        currentMulipylerAddedTime = Time.time;
+        scoreBoosterActiveText.text = "SCORE BOOST " + currentMulipyler + "x"; 
+        scoreBoosterActiveText.gameObject.SetActive(true);
+    }
+
     public int getHighScore(){
-        return (int) (highestXValue / scoreDivisor);
+        return (int) scoreValue;
     }
 
     public void endGameRunning(){

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private HighScoreController highScoreController = null;
+    [SerializeField] private ItemCounterController itemController = null;
     [SerializeField] private Rigidbody2D playerRigidbody = null;
     [SerializeField] private float strenghtMove = 10;
     [SerializeField] private float strenghtJump = 100;
@@ -41,6 +43,15 @@ public class Player : MonoBehaviour
         }
         else {
             playerAnimator.SetBool("isRolling", false);
+        }
+        
+
+        //Use Items:
+        //Use ScoreBoost
+        if(Input.GetKeyDown(KeyCode.E)){
+            if(itemController.useItem("scoreBoostItem")){
+                highScoreController.scoreBooster();
+            }
         }
     }
 }

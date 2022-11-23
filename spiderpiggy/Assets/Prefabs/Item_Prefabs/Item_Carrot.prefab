@@ -236,5 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12adb0cf7d55824d8a3954b21c0553a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: scoreBoostItem
   player: {fileID: 0}
   itemCounter: {fileID: 0}
