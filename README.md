@@ -3,7 +3,9 @@
 
 ## Beschreibung
 
-Bei unserem 2d Sidescroller Game geht es darum, so viele Items wie möglich einzusammeln. Unser Game ist ein Endlessrunner und wenn man stirbt wir der Highscore präsentiert.  
+Bei unserem 2d Sidescroller Game geht es darum, so viele Items wie möglich einzusammeln. 
+Dabei muss man sich an einem Seil von Plattform zu Plattform schwingen.
+Unser Game ist ein Endlessrunner und wenn man stirbt wir der Highscore präsentiert.  
 
 ### Genre & Art Style
 2D Sidescroller, Platformer, Endlessrunner
@@ -39,7 +41,7 @@ Wenn der Player stirbt erscheint das gameOver Menü
 
 ### Player Control
 
-Der Player kann mit der Steuerung sich fortbewegen, von Platformen schwingen und Items einsammeln.
+Der Player kann mit der Steuerung sich fortbewegen, von Plattformen schwingen und Items einsammeln.
 
 ### Objekte
 
