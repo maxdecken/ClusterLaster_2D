@@ -29,24 +29,26 @@ public class HighScoreController : MonoBehaviour
     void Update()
     {
         //Handle the muliplyer and degrade over time
-        if(gameRunning && currentMulipyler > 1){
-            if(Time.time - currentMulipylerAddedTime >= scoreBoostActiveSec){
-                currentMulipyler --;
-                if(currentMulipyler > 1){
-                    currentMulipylerAddedTime = Time.time;
-                    scoreBoosterActiveText.text = "SCORE BOOST " + currentMulipyler + "x";
-                }else{
-                    scoreBoosterActiveText.gameObject.SetActive(false);
+        if(gameRunning){
+            if(currentMulipyler > 1){
+                if(Time.time - currentMulipylerAddedTime >= scoreBoostActiveSec){
+                    currentMulipyler --;
+                    if(currentMulipyler > 1){
+                        currentMulipylerAddedTime = Time.time;
+                        scoreBoosterActiveText.text = "SCORE BOOST " + currentMulipyler + "x";
+                    }else{
+                        scoreBoosterActiveText.gameObject.SetActive(false);
+                    }
                 }
             }
-        }
 
-        //Calc current Score
-        if(gameRunning && playerPosition.position.x > latestPosition){
-            float distance = playerPosition.position.x - latestPosition;
-            latestPosition = playerPosition.position.x;
-            scoreValue += (distance/scoreDivisor) * currentMulipyler;
-            scoreText.text = "Score: " + ((int) scoreValue);
+            //Calc current Score
+            if(playerPosition.position.x > latestPosition){
+                float distance = playerPosition.position.x - latestPosition;
+                latestPosition = playerPosition.position.x;
+                scoreValue += (distance/scoreDivisor) * currentMulipyler;
+                scoreText.text = "Score: " + ((int) scoreValue);
+            }
         }
     }
 
@@ -64,5 +66,15 @@ public class HighScoreController : MonoBehaviour
 
     public void endGameRunning(){
         gameRunning = false;
+
+        //If no HighScoreFile exists, create a new one
+        if(!PlayerPrefs.HasKey("highScore")){
+            PlayerPrefs.SetInt("highScore", 0);
+        }
+
+        //If new HighScore, store locally
+        if(PlayerPrefs.GetInt("highScore") < (int) scoreValue){
+            PlayerPrefs.SetInt("highScore", (int) scoreValue);
+        }
     }
 }
