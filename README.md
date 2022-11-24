@@ -3,46 +3,45 @@
 
 ## Beschreibung
 
-Bei unserem Jump and Run Game geht es darum den Spieler zum Ende des Spiels zu navigieren, während der Player einige Hindernisse ausweichen muss und sich dabei von Platform zu Platform bewegt.
+Bei unserem 2d Sidescroller Game geht es darum, so viele Items wie möglich einzusammeln. Unser Game ist ein Endlessrunner und wenn man stirbt wir der Highscore präsentiert.  
 
 ### Genre & Art Style
-2D Sidescroller, Platformer
+2D Sidescroller, Platformer, Endlessrunner
 
 ## Features
 
 ### Player 
 
 Der Player wird gesteuert mit den WASD Tasten.
+Das Seil wir mit der linken Maustaste bediehnt.
+Der Player kann auch Items einsammeln, wie Äpfel, Bananen, etc.
 
 ### Enemies
-Die Enemies sind auch Prefabs
+Die Enemies sind auch Prefabs.
+Als Enemy gibt es Möwen, Meteroiten und Drohnen.
+Möwen und Drohnen bewegen sich jeweils ... Einheiten hin und her (von rechtes nach links). Kommt der Spieler mit einem enemy in berührung, wir das Spiel neu gestartet. 
+Wenn der Spieler mit dem Feuer am Boden ebenfalls in Behrührung kommt, heißt es Game Over. 
 
 ### Items
 
-<li>Äpfel - asdf</li>
-<li>Banenen - asdf</li>
+<li>Apfel: besserer Sprung</li>
+<li>Karotte: Score-Boost</li>
+<li>Kartoffel: Unbesiegbarkeit</li>
 
 
 ## Spiel
 
-### Hauptmenü & Pausenmenü
+##### GameOver Menü 
 
-Bevor das Spiel gestartet wird, erscheint das Hauptmenü.
-<li>PLAY - Das Spiel wird gestartet</li>
-<li>OPTIONS - Erklärung wie das Spiel gesteuert und gespielt wird, Volumeregler (einstellen der Lautstärke)</li>
-
-##### Das Pausenmenü wird durch die P Taste aufgerufen.
-
-<li>Resume - Das Spiel wird fortgesetzt</li>
-<li>Main Menu - Der Spielfortschritt wird beendet und man wird zum Hauptmenü geleitet.</li>
+Wenn der Player stirbt erscheint das gameOver Menü
+<li>Try Again - das Spiel startet erneut</li>
+<li>Quit - Das Spiel wird beendet</li>
 
 ### Player Control
 
-Der Player kann mit de
+Der Player kann mit der Steuerung sich fortbewegen, von Platformen schwingen und Items einsammeln.
 
 ### Objekte
-
-Damit es nicht allzu l
 
 
 ### Team
