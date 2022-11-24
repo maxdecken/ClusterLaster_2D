@@ -8,6 +8,7 @@ TagManager:
   - SceneComponentBackground
   - Rope
   - Enemy
+  - Fire
   layers:
   - Default
   - TransparentFX

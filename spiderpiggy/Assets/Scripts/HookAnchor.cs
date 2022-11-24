@@ -25,7 +25,6 @@ public class HookAnchor : MonoBehaviour
     private Animator playerAnimator;
     
     
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +40,7 @@ public class HookAnchor : MonoBehaviour
         setTargetPosition();
         if (Input.GetMouseButtonDown(0))
         {
+
 
             if (ropeIsActive == false)
             {
