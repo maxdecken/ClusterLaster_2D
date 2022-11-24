@@ -10,6 +10,7 @@ public class GameStateController : MonoBehaviour
     [SerializeField] private GameObject sceneComponentBackgroundPrefab = null;
     [SerializeField] private int sceneElementWidth = 40;
     [SerializeField] private int sceneBackgroundElementWidth = 150;
+    [SerializeField] private HighScoreController highScoreController = null;
     private int latestPositionAdded = 0;
     private int latestBackgroundPositionAdded = 0;
     private int lastComponentAdded = 0;
@@ -34,7 +35,20 @@ public class GameStateController : MonoBehaviour
             }
             while(lastComponentAdded == randomComponent);
 
-            Instantiate(sceneComponentPrefab[randomComponent], new Vector2(newPos, 0), Quaternion.identity);
+            GameObject newLevelComponent =  Instantiate(sceneComponentPrefab[randomComponent], new Vector2(newPos, 0), Quaternion.identity);
+
+            //Deactivate Enemnys randomly, but driven by the current score
+            foreach (Transform child in newLevelComponent.transform){
+                if (child.tag == "Enemy"){
+                    int currentHighScore = highScoreController.getHighScore();
+
+                    //Up to the Score of 200, more and more enemny will randomly stay, if the score is higher than 200, all will stay
+                    float randomEnemyActivation = Random.Range(0, 200f);
+                    if(randomEnemyActivation > currentHighScore){
+                        child.gameObject.SetActive(false);
+                    }
+                }
+            }
 
             latestPositionAdded = newPos;
             lastComponentAdded = randomComponent;

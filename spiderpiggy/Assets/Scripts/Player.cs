@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float strenghtMove = 10;
     [SerializeField] private float strenghtJump = 100;
     [SerializeField] private ForceMode2D forceModeMovement = ForceMode2D.Force;
+    [SerializeField] private AudioSource stepSound = null;
+    [SerializeField] private AudioSource jumpSound = null;
 
     private Animator playerAnimator;
     private int jumpesInRow = 0;
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
             if(jumpesInRow <= 4){
                 playerRigidbody.AddForce(new Vector2(0f,  strenghtJump));
                 jumpesInRow++;
+                jumpSound.Play();
             }
         }
         //Move Left
@@ -34,12 +37,14 @@ public class Player : MonoBehaviour
             playerRigidbody.AddForce(new Vector2(-strenghtMove, 0f), forceModeMovement);
             jumpesInRow = 0;
             playerAnimator.SetBool("isRolling", true);
+            stepSound.Play();
         }
         //Move Right
         else if(Input.GetKey(KeyCode.D)){
             playerRigidbody.AddForce(new Vector2(strenghtMove, 0f), forceModeMovement);
             jumpesInRow = 0;
             playerAnimator.SetBool("isRolling", true);
+            stepSound.Play();
         }
         else {
             playerAnimator.SetBool("isRolling", false);
