@@ -48,7 +48,8 @@ public class Drone : MonoBehaviour
         yield return new WaitForSeconds(freezeDurationValue);
         xFreeze = 0;
         yFreeze = 0;  
-        Debug.Log("You are not frozen!");   
+        Debug.Log("You are not frozen!");
+        GameEventManager.current.OnItemTriggerEnter -= a;
     }
     
     public void DroneActivateTimeStop()
