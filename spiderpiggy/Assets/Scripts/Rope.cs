@@ -70,10 +70,6 @@ public class Rope : MonoBehaviour
             
             RopePivot.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,  vectorToHook.y*20));
             playerRigidbody.AddForce(new Vector2(-vectorToHook.x*30,  vectorToHook.y*30));
-            Debug.Log("piggy: " + (Vector2)player.transform.position);
-            Debug.Log("hook: " + hookTarget);
-            Debug.Log("vektor: " + vectorToHook);
-            
             //lastRopePivot.distance 
            
         }   

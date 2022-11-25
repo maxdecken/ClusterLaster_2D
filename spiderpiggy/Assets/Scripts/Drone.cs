@@ -1,23 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Drone : MonoBehaviour
 {
-    public float speed = -3.0f;
     private Rigidbody2D rb;
     private Vector3 enemyPos;
+    [SerializeField] private float freezeDurationValue = 10;
+    [SerializeField] public float xVelocity = -3.0f;
+    [SerializeField] public float yVelocity = 4;
+    private float xFreeze = 0;
+    private float yFreeze = 0;
+    private Action a;
 
     // Start is called before the first frame update
     void Start()
     {
+        Action a = () => DroneActivateTimeStop();
+        GameEventManager.current.OnItemTriggerEnter += a;
         rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.velocity = new Vector2(speed, 4 * Mathf.Sin(Time.time * 3.5f));
+        rb.velocity = new Vector2((xVelocity - xFreeze), (yVelocity - yFreeze) * Mathf.Sin(Time.time * 3.5f));
 
         enemyPos = Camera.main.WorldToScreenPoint(transform.position);
     }
@@ -30,5 +38,21 @@ public class Drone : MonoBehaviour
             Destroy(other.transform.parent.gameObject);
             Debug.Log("GETROFFEN");
         }
+    }
+    
+    public IEnumerator DroneActivateTimeStopCoroutine()
+    {
+        xFreeze = xVelocity;
+        yFreeze = yVelocity;
+        Debug.Log("Time is frozen");
+        yield return new WaitForSeconds(freezeDurationValue);
+        xFreeze = 0;
+        yFreeze = 0;  
+        Debug.Log("You are not frozen!");   
+    }
+    
+    public void DroneActivateTimeStop()
+    {
+        StartCoroutine(DroneActivateTimeStopCoroutine());
     }
 }

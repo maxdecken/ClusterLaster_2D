@@ -11,6 +11,10 @@ public class ItemCounterController : MonoBehaviour
     [SerializeField] private TMP_Text timefreezeItemsCollectedText = null;
     [SerializeField] private AudioSource pickupItemSound = null;
     [SerializeField] private AudioSource activateItemSound = null;
+    [SerializeField] private GameObject player = null;
+    [SerializeField] private GameObject meteor = null;
+    [SerializeField] private GameObject seagull = null;
+    [SerializeField] private GameObject drone = null;
     private int jumpItemsCollected = 0;
     private int scoreBoostItemsCollected = 0;
     private int invincibilityItemsCollected = 0;
@@ -29,15 +33,22 @@ public class ItemCounterController : MonoBehaviour
         if(itemType == "jumpItem"){
             jumpItemsCollected ++;
             jumpItemsCollectedText.text = "Big Jumps: " + jumpItemsCollected;
+            player.GetComponent<Player>().ActivateJumpPower();
         }else if(itemType == "scoreBoostItem"){
             scoreBoostItemsCollected ++;
             scoreBoostItemsCollectedText.text = "Score Booster: " + scoreBoostItemsCollected;
         }else if(itemType == "invincibilityItem"){
             invincibilityItemsCollected ++;
             invincibilityItemsCollectedText.text = "Invincibility: " + invincibilityItemsCollected;
+            player.GetComponent<Player>().ActivateInvincibility();
         }else if(itemType == "timefreezeItem"){
             timefreezeItemsCollected ++;
             timefreezeItemsCollectedText.text = "Freeze Time: " + timefreezeItemsCollected;
+            GameEventManager.current.ItemTriggerEnter();
+            
+            //seagull.GetComponent<Seagull>().SeagullActivateTimeStop();
+            //drone.GetComponent<Drone>().DroneActivateTimeStop();
+            //meteor.GetComponent<Meteor>().MeteorActivateTimeStop();
         }
         pickupItemSound.Play();
     }
