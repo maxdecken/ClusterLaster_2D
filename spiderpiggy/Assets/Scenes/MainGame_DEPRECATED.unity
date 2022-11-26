@@ -1185,12 +1185,12 @@ GameObject:
   - component: {fileID: 138687807}
   - component: {fileID: 138687806}
   m_Layer: 5
-  m_Name: timeFreezeItemActive
+  m_Name: timeFreezeItemScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &138687806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Freeze Time
+  m_text: 'Freeze Time: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1306,7 +1306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 676.6, y: -24}
+  m_AnchoredPosition: {x: 0, y: -90}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &201399782
@@ -1407,15 +1407,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cd0138bf14a424ab739db9fe269040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpItemsCollectedText: {fileID: 1772166138}
+  scoreBoostItemsCollectedText: {fileID: 1243651911}
+  invincibilityItemsCollectedText: {fileID: 317406422}
+  timefreezeItemsCollectedText: {fileID: 138687806}
   pickupItemSound: {fileID: 1198373773}
   activateItemSound: {fileID: 347687684}
-  highScoreController: {fileID: 952357251}
   player: {fileID: 1835051740}
-  jumpActiveDisplay: {fileID: 1772166136}
-  scoreBoosterActiveDisplay: {fileID: 1243651908}
-  invincibilityActiveDisplay: {fileID: 317406419}
-  timefreezeActiveDisplay: {fileID: 138687805}
-  powerUpDurationValue: 10
+  meteor: {fileID: 2864524762660670861, guid: 9cd3cc9774b4fc744a5d3fa1b6e5eec6, type: 3}
+  seagull: {fileID: 5206869299084352763, guid: 544c74e92d9719b4cad54e655f25dd06, type: 3}
+  drone: {fileID: 2864524762660670861, guid: ca79a610ad6066f49940cb7e318396b2, type: 3}
 --- !u!4 &226875976
 Transform:
   m_ObjectHideFlags: 0
@@ -1528,12 +1529,12 @@ GameObject:
   - component: {fileID: 317406421}
   - component: {fileID: 317406422}
   m_Layer: 5
-  m_Name: invincibilityItemActive
+  m_Name: invincibilityItemScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &317406420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1552,7 +1553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 460, y: -25}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &317406421
@@ -1583,7 +1584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Invincibility
+  m_text: 'Invincibility: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1817,7 +1818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178, y: -96.100006}
+  m_AnchoredPosition: {x: 178, y: -96.1}
   m_SizeDelta: {x: 275, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &444240082
@@ -2141,6 +2142,7 @@ RectTransform:
   m_Children:
   - {fileID: 418424763}
   - {fileID: 970857200}
+  - {fileID: 2010716377}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2590,6 +2592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 970857201}
+  scoreBoosterActiveText: {fileID: 2010716378}
   playerPosition: {fileID: 1835051746}
   scoreDivisor: 5
   scoreBoostActiveSec: 20
@@ -3185,12 +3188,12 @@ GameObject:
   - component: {fileID: 1243651910}
   - component: {fileID: 1243651911}
   m_Layer: 5
-  m_Name: scoreBoostItemActive
+  m_Name: scoreBoostItemScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1243651909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3209,7 +3212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 197, y: -24}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1243651910
@@ -3240,7 +3243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score Boost 0x
+  m_text: 'Score Booster: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4357,12 +4360,12 @@ GameObject:
   - component: {fileID: 1772166139}
   - component: {fileID: 1772166138}
   m_Layer: 5
-  m_Name: jumpItemActive
+  m_Name: jumpItemScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1772166137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4381,7 +4384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -21}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772166138
@@ -4404,7 +4407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Big Jump
+  m_text: 'Big Jumps: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4686,6 +4689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13df45ffea8a9a45914c2d361ebbb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highScoreController: {fileID: 952357251}
   itemController: {fileID: 226875975}
   playerRigidbody: {fileID: 1835051743}
   strenghtMove: 5
@@ -4940,6 +4944,141 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 47.799973}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2010716376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2010716377}
+  - component: {fileID: 2010716379}
+  - component: {fileID: 2010716378}
+  m_Layer: 5
+  m_Name: CurrentSpeedBoosterText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2010716377
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010716376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 558931068}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -199.1}
+  m_SizeDelta: {x: 400, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2010716378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010716376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: SCORE BOOST 0x
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 42
+  m_fontSizeBase: 42
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2010716379
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010716376}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2068979197
 PrefabInstance:
   m_ObjectHideFlags: 0

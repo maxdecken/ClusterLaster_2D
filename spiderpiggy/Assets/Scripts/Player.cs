@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private HighScoreController highScoreController = null;
     [SerializeField] private ItemCounterController itemController = null;
     [SerializeField] private Rigidbody2D playerRigidbody = null;
     [SerializeField] private float strenghtMove = 10;
@@ -50,44 +49,39 @@ public class Player : MonoBehaviour
         else {
             playerAnimator.SetBool("isRolling", false);
         }
-        
-
-        //Use Items:
-        //Use ScoreBoost
-        if(Input.GetKeyDown(KeyCode.E)){
-            if(itemController.useItem("scoreBoostItem")){
-                highScoreController.scoreBooster();
-            }
-        }
     }
 
 
-    public IEnumerator ActivateJumpPowerCoroutine()
+    public IEnumerator ActivateJumpPowerCoroutine(GameObject displayActive)
     {
+        displayActive.SetActive(true);
         Debug.Log("You are jumpy!");
         strenghtJump = strenghtJump * 6; 
         yield return new WaitForSeconds(powerUpDurationValue);
         strenghtJump = strenghtJump / 6; 
         Debug.Log("You are not jumpy!");  
+        displayActive.SetActive(false);
     }
     
-    public void ActivateJumpPower()
+    public void ActivateJumpPower(GameObject displayActive)
     {
-        StartCoroutine(ActivateJumpPowerCoroutine());
+        StartCoroutine(ActivateJumpPowerCoroutine(displayActive));
     }
     
-    public IEnumerator ActivateInvincibilityCoroutine()
+    public IEnumerator ActivateInvincibilityCoroutine(GameObject displayActive)
     {
+        displayActive.SetActive(true);
         Debug.Log("You are invincible!"); 
         isInvincible = true; 
         yield return new WaitForSeconds(powerUpDurationValue);
         isInvincible = false; 
         Debug.Log("You are not invincible!");   
+        displayActive.SetActive(false);
     }
     
-    public void ActivateInvincibility()
+    public void ActivateInvincibility(GameObject displayActive)
     {
-        StartCoroutine(ActivateInvincibilityCoroutine());
+        StartCoroutine(ActivateInvincibilityCoroutine(displayActive));
     }
     
     private void OnTriggerEnter2D(Collider2D collider){

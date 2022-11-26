@@ -6,10 +6,10 @@ using TMPro;
 public class HighScoreController : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText = null;
-    [SerializeField] private TMP_Text scoreBoosterActiveText = null;
     [SerializeField] private Transform playerPosition = null;
     [SerializeField] private int scoreDivisor = 5;
     [SerializeField] private float scoreBoostActiveSec = 15f;
+    private GameObject displayActive = null;
     private int currentMulipyler = 1;
     private float currentMulipylerAddedTime = -1;
     private float latestPosition = 0;
@@ -22,7 +22,6 @@ public class HighScoreController : MonoBehaviour
         gameRunning = true;
         latestPosition = playerPosition.position.x;
         scoreText.text = "Score: " + ((int) scoreValue);
-        scoreBoosterActiveText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,9 +34,9 @@ public class HighScoreController : MonoBehaviour
                     currentMulipyler --;
                     if(currentMulipyler > 1){
                         currentMulipylerAddedTime = Time.time;
-                        scoreBoosterActiveText.text = "SCORE BOOST " + currentMulipyler + "x";
+                        displayActive.GetComponent<TMP_Text>().text = "Score Boost x" + currentMulipyler;
                     }else{
-                        scoreBoosterActiveText.gameObject.SetActive(false);
+                        displayActive.SetActive(false);
                     }
                 }
             }
@@ -53,11 +52,12 @@ public class HighScoreController : MonoBehaviour
     }
 
     
-    public void scoreBooster(){
+    public void scoreBooster(GameObject displayActive){
+        this.displayActive = displayActive;
         currentMulipyler ++;
         currentMulipylerAddedTime = Time.time;
-        scoreBoosterActiveText.text = "SCORE BOOST " + currentMulipyler + "x"; 
-        scoreBoosterActiveText.gameObject.SetActive(true);
+        this.displayActive.SetActive(true);
+        this.displayActive.GetComponent<TMP_Text>().text = "Score Boost x" + currentMulipyler;
     }
 
     public int getHighScore(){
