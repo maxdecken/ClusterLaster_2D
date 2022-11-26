@@ -2020,6 +2020,13 @@ MonoBehaviour:
   - {fileID: 4055257277025607823, guid: 10606d21b31c67047861a8739987a2ba, type: 3}
   - {fileID: 4026218836077662447, guid: 5e29ed31ff1060d4db621040a9e52652, type: 3}
   - {fileID: 3584265169688576859, guid: 9f8f2c88e8dc0654d9a43432edb45070, type: 3}
+  - {fileID: 3005449739041530877, guid: efb26cb4b221d5c41b4c9bc2a2c079c2, type: 3}
+  - {fileID: 4910851010555298659, guid: b6dbe6bf711bed84395f6f674f9b18bb, type: 3}
+  - {fileID: 5470817292687737629, guid: 5826d23e8b9fbcf42a0bb00683621552, type: 3}
+  - {fileID: 7157079446173549081, guid: ab1df286f8aa47842b13f1f81ecc635a, type: 3}
+  - {fileID: 7696911425610277612, guid: 1e1c451bf4aa4304da7b718e298c2b14, type: 3}
+  - {fileID: 3138164528936989068, guid: 42132082a046a084983c3cb9519dbdc1, type: 3}
+  - {fileID: 537394964601650396, guid: 30f813918bad23840a13c86a68af4c36, type: 3}
   sceneComponentBackgroundPrefab: {fileID: 1556203422787991283, guid: 2b27e9de25baa7b4dae04f00fc4c1ad4, type: 3}
   sceneElementWidth: 42
   sceneBackgroundElementWidth: 150
