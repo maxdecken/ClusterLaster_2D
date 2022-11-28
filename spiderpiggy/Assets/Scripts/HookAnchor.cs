@@ -8,12 +8,14 @@ public class HookAnchor : MonoBehaviour
     [SerializeField] SpriteRenderer targetSprite;
     [SerializeField] Transform target;
     private Vector2 hookTarget;
+    private Vector2 mousePosition;
     private float maxDistance = 30f;
     public GameObject hook;
 
     private GameObject currentHook;
 
     private bool ropeIsActive = false;
+    private bool hookAble = false;
     
     private BoxCollider2D playerHitBox;
     private Vector3 targetPosition;
@@ -37,12 +39,12 @@ public class HookAnchor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        setTargetPosition();
+        SetTargetPosition();
         if (Input.GetMouseButtonDown(0))
         {
 
 
-            if (ropeIsActive == false)
+            if (ropeIsActive == false && hookAble)
             {
                 currentHook = (GameObject) Instantiate(hook, transform.position, Quaternion.identity);
 
@@ -67,14 +69,14 @@ public class HookAnchor : MonoBehaviour
     }
 
 
-    private void setTargetPosition(){
+    private void SetTargetPosition(){
         
-        // Hook Target bestimmten
-        hookTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // Mausposition bestimmen
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
        
         
-        var x = hookTarget.x;
-        var y = hookTarget.y;
+        var x = mousePosition.x;
+        var y = mousePosition.y;
 
         //hookTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
@@ -99,16 +101,16 @@ public class HookAnchor : MonoBehaviour
         
         if (hit.collider != null)
         {
+            hookAble = true;
             targetPosition = new Vector3(hit.point.x, hit.point.y, 0);
             target.transform.position = targetPosition;
-
-            hitSquareBetween.transform.position = new Vector3(hit.point.x, hit.point.y, 0);
+            
 
             hookTarget = new Vector2(hit.point.x, hit.point.y);
         }
         else
         {
-            // enter solution for non hit targetting
+            hookAble = false;
         }
         
         

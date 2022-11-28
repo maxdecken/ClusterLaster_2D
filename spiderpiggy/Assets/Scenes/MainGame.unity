@@ -4689,7 +4689,7 @@ MonoBehaviour:
   itemController: {fileID: 226875975}
   playerRigidbody: {fileID: 1835051743}
   strenghtMove: 5
-  strenghtJump: 10
+  strenghtJump: 50
   powerUpDurationValue: 10
   forceModeMovement: 0
   isInvincible: 0

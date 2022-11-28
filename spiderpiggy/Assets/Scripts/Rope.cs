@@ -13,7 +13,7 @@ public class Rope : MonoBehaviour
 
     [SerializeField] GameObject RopePivotPrefab;
     [SerializeField] GameObject player;
-    private Rigidbody2D playerRigidbody = null;
+    private Rigidbody2D playerRigidbody;
     [SerializeField] GameObject lastRopePivot;
     private GameObject RopePivot;
     public List<GameObject> RopePivotConections = new List<GameObject>();
