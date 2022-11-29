@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Serialization;
 using UnityEngine;
-using System.Collections.Generic;
 using System.Linq;
 
 
@@ -84,14 +83,12 @@ public class Rope : MonoBehaviour
         for (i = 0; i < RopePivotConections.Count; i++)
         {
             lineRenderer.SetPosition(i, RopePivotConections[i].transform.position);
-            //Debug.Log(i);
-            //Debug.Log(RopePivotConections[i].transform.position);
         }
 
         lineRenderer.SetPosition(i, player.transform.position);
         //playerRigidbody.AddForce(new Vector2(0,  vectorToHook.y*300));
     }
-
+    
     void CreateRopePivot()
     {
         

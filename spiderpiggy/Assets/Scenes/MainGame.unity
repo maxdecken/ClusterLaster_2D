@@ -4686,10 +4686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13df45ffea8a9a45914c2d361ebbb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemController: {fileID: 226875975}
   playerRigidbody: {fileID: 1835051743}
-  strenghtMove: 5
-  strenghtJump: 50
+  strenghtMove: 8
+  strenghtJump: 500
   powerUpDurationValue: 10
   forceModeMovement: 0
   isInvincible: 0
@@ -4755,7 +4754,6 @@ MonoBehaviour:
   targetSprite: {fileID: 1833369951705342411}
   target: {fileID: 1833369951705342410}
   hook: {fileID: 1833369951140579848, guid: a4fff7ad4eabf0d43a8f333539c9562d, type: 3}
-  hitSquareBetween: {fileID: 1516701237}
 --- !u!4 &1835051746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3008717011592349161, guid: 45c630af06620454e9a30ad87c481477, type: 3}

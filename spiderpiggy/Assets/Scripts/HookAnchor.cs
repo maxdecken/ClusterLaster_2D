@@ -20,10 +20,7 @@ public class HookAnchor : MonoBehaviour
     private BoxCollider2D playerHitBox;
     private Vector3 targetPosition;
     private int layermaskToHit;
-    
-    [SerializeField] private GameObject hitSquareBetween = null;
 
-    
     private Animator playerAnimator;
     
     
@@ -33,7 +30,6 @@ public class HookAnchor : MonoBehaviour
         playerHitBox = GetComponent<BoxCollider2D>();
         layermaskToHit = 1 << LayerMask.NameToLayer("Hookable");
         playerAnimator = GetComponent<Animator>();
-        Debug.Log(layermaskToHit);
     }
 
     // Update is called once per frame

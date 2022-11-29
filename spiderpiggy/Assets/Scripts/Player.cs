@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private ItemCounterController itemController = null;
+    //[SerializeField] private ItemCounterController itemController = null;
     [SerializeField] private Rigidbody2D playerRigidbody = null;
     [SerializeField] private float strenghtMove = 10;
     [SerializeField] private float strenghtJump = 20;
@@ -55,11 +55,9 @@ public class Player : MonoBehaviour
     public IEnumerator ActivateJumpPowerCoroutine(GameObject displayActive)
     {
         displayActive.SetActive(true);
-        Debug.Log("You are jumpy!");
-        strenghtJump = strenghtJump * 6; 
+        strenghtJump = strenghtJump * 2; 
         yield return new WaitForSeconds(powerUpDurationValue);
-        strenghtJump = strenghtJump / 6; 
-        Debug.Log("You are not jumpy!");  
+        strenghtJump = strenghtJump / 2;
         displayActive.SetActive(false);
     }
     
@@ -71,11 +69,9 @@ public class Player : MonoBehaviour
     public IEnumerator ActivateInvincibilityCoroutine(GameObject displayActive)
     {
         displayActive.SetActive(true);
-        Debug.Log("You are invincible!"); 
         isInvincible = true; 
         yield return new WaitForSeconds(powerUpDurationValue);
-        isInvincible = false; 
-        Debug.Log("You are not invincible!");   
+        isInvincible = false;
         displayActive.SetActive(false);
     }
     
