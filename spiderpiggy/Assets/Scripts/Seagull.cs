@@ -12,6 +12,8 @@ public class Seagull : MonoBehaviour
     [SerializeField] private float freezeDurationValue = 10;
     [SerializeField] private float xVelocity = -6;
     [SerializeField] private float yVelocity = 1.2f;
+    private Vector3 characterScale;
+    private float scaleSave;
     private float xFreeze = 0;
     private float yFreeze = 0;
     private Action a;
@@ -22,13 +24,25 @@ public class Seagull : MonoBehaviour
         Action a = () => SeagullActivateTimeStop();
         GameEventManager.current.OnItemTriggerEnter += a;
         rb = this.GetComponent<Rigidbody2D>();
+        scaleSave = transform.localScale.x;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         rb.velocity = new Vector2((xVelocity - xFreeze)   * Mathf.Cos(Time.time * 0.2f), (yVelocity - yFreeze) * Mathf.Cos(Time.time * 2));
+        characterScale = transform.localScale;
+        if (Mathf.Cos(Time.time * 0.2f) < 0)
+        {
+            characterScale.x = -scaleSave;
+        }
+        else
+        {
+            characterScale.x = scaleSave;
+        }
 
+        transform.localScale = characterScale;
+        
         enemyPos = Camera.main.WorldToScreenPoint(transform.position);
     }
     

@@ -47,12 +47,10 @@ public class Meteor : MonoBehaviour
         xFreeze = xVelocity;
         yFreeze = gravitySpeed;
         rotateFreeze = rotateSpeed;
-        Debug.Log("Time is frozen");
         yield return new WaitForSeconds(freezeDurationValue);
         xFreeze = 0;
         yFreeze = 0;
         rotateFreeze = 0;
-        Debug.Log("You are not frozen!"); 
         GameEventManager.current.OnItemTriggerEnter -= a;
     }
     
