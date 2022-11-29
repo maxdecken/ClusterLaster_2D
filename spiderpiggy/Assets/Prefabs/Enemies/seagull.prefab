@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5206869299084352757}
   - component: {fileID: 5206869299084352756}
   - component: {fileID: 5109019375226694885}
+  - component: {fileID: 8182994663498737008}
   m_Layer: 0
   m_Name: seagull
   m_TagString: Enemy
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206869299084352763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.09, y: -6.06, z: 0}
+  m_LocalPosition: {x: 11.63, y: -6.06, z: 0}
   m_LocalScale: {x: 0.2944, y: 0.2944, z: 0.2944}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2b9986c9b446e9340a5aa56d72d0cbd6, type: 3}
+  m_Sprite: {fileID: -1271972620, guid: 1dc5150f984b8384890b59c8ee635ad3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 8.44}
+    oldSize: {x: 10.17, y: 8.44}
     newSize: {x: 10.24, y: 8.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,3 +148,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -3
+  freezeDurationValue: 10
+  xVelocity: -6
+  yVelocity: 1.2
+--- !u!95 &8182994663498737008
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206869299084352763}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44aaaabc92a82f44b8ef771c536a8b87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
