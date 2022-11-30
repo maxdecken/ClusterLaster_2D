@@ -6,17 +6,17 @@ SpiderPiggy ist ein 2D-Spiel für den Game-Engines Kurs des Studiengangs IMI an 
 
 ## Getting Started
 
-WICHTIG: Das Spiel ist für Windows (10 und 11) entwickelt und lässt sich auf dieser Plattform spielen.
+WICHTIG: Das Spiel ist für Windows (10 und 11) entwickelt und lässt sich ausschließlich auf dieser Plattform spielen.
 
-Um das Spiel zu Starten muss der Inhalt des Ornder <code>/builds/windows</code> heruntergeladen und die darinbefindliche <code>SpiderPiggy.exe</code> gestartet werden.
+Um das Spiel zu starten muss der Inhalt des Ornder <code>/builds/windows</code> heruntergeladen und die darinbefindliche <code>SpiderPiggy.exe</code> gestartet werden.
 
 Viel Spaß beim spielen!
 
 ## Beschreibung
 
 Bei unserem 2d Sidescroller Game geht es darum, so viele Items wie möglich einzusammeln. 
-Dabei muss man sich an einem Seil von Plattform zu Plattform schwingen.
-Unser Game ist ein Endlessrunner und wenn man stirbt wir der Highscore präsentiert.  
+Dabei muss man sich an einem Seil von Plattform zu Plattform schwingen und darf dabei nicht in das tötliche Feuer fallen.
+Unser Game ist ein Endlessrunner bei welchem es stets gilt den momentanen Highscore zu knacken, welcher einem jeweils am Ende eines Runs präsentiert wird.  
 
 ### Genre & Art Style
 2D Sidescroller, Platformer, Endlessrunner
@@ -27,9 +27,9 @@ Unser Game ist ein Endlessrunner und wenn man stirbt wir der Highscore präsenti
 
 ![grafik](https://user-images.githubusercontent.com/68195151/204776815-ca0aeb79-7d34-4dd1-b47d-fa2b945a79e1.png)
 
-Der Player wird gesteuert mit den WASD Tasten.
-Das Seil wir mit der linken Maustaste bediehnt.
-Der Player kann auch Items einsammeln, wie Äpfel, Bananen, etc.
+Der Player (Als Prefab implementiert) wird gesteuert mit den WASD Tasten.
+Das Seil wir mit der linken Maustaste bedient.
+Der Player kann auch Items wie Äpfel, Bananen, etc. einsammeln, welche jeweils unterschiedliche Vorteile bringen.
 
 ### Enemies
 
@@ -39,8 +39,8 @@ Der Player kann auch Items einsammeln, wie Äpfel, Bananen, etc.
 
 Die Enemies sind auch Prefabs.
 Als Enemy gibt es Möwen, Meteroiten und Drohnen.
-Möwen und Drohnen bewegen sich jeweils ... Einheiten hin und her (von rechtes nach links). Kommt der Spieler mit einem enemy in berührung, wir das Spiel neu gestartet. 
-Wenn der Spieler mit dem Feuer am Boden ebenfalls in Behrührung kommt, heißt es Game Over. 
+Möwen und Drohnen bewegen sich jeweils x Einheiten hin und her (von rechtes nach links). Kommt der Spieler mit einem Enemy in Berührung wird das Spiel neu gestartet. 
+Sobald der Spieler mit dem Feuer am Boden in Behrührung kommt, heißt es Game Over. 
 
 
 ### Items
@@ -50,7 +50,7 @@ Wenn der Spieler mit dem Feuer am Boden ebenfalls in Behrührung kommt, heißt e
 ![grafik](https://user-images.githubusercontent.com/68195151/204774898-c2cc9ace-4180-43e4-8795-dad5fa8c67a3.png)
 ![grafik](https://user-images.githubusercontent.com/68195151/204774956-ce681d24-d380-46da-9d64-77da423eb273.png)
 
-Items verbessern die Situation des Spielers oder geben ihm Kräft, die seine Spielsituation verbessern.
+Items verbessern die Situation des Spielers oder geben ihm Kraft, was für ein erfolgreiches Gameplay essentiell ist.
 Es gibt folgende Items:
 
 * Apfel: Big Jump
@@ -73,7 +73,7 @@ Zu Beginn des Spiels erscheint das Start Menü.
 
 ### Main Game
 
-Das Herzstück des Spiels: das Endlessrunner-Spiel das sich automatisch und zufällig erweitert. Hier geht es darum den hächsten Score zu sammeln und nicht zu sterben. Ins Feuerfallen oder die "ESC"-Taste drücken beendet das Spiel.
+Das Herzstück des Spiels: Die sich automatisch / zufällig während dem Gameplay aufbauende Endlessrunner-Szene. Hier geht es darum den höchstmöglichen Score zu erreichen und dabei nicht zu sterben. In das Feuer zu fallen oder die "ESC"-Taste drücken beendet das Spiel.
 
 ![grafik](https://user-images.githubusercontent.com/68195151/204862896-e4f63271-089c-4085-9fc9-c3c930ae9225.png)
 ![grafik](https://user-images.githubusercontent.com/68195151/204863417-930feb32-66b9-4296-91a4-81af09f4d1a1.png)
@@ -90,16 +90,16 @@ Hier wird dem Spieler in einem Mini-Level die Steuerung erklärt.
 
 ### GameOver Menü 
 
-Wenn der Player stirbt erscheint das Game-Over-Menü, hier wird der aktuell errichte Score und der bisherige Highscore angezeigt.
+Wenn der Player stirbt erscheint das Game-Over-Menü. Hier wird der aktuell erreichte Score sowie der bisherige Highscore angezeigt.
 
 ![grafik](https://user-images.githubusercontent.com/68195151/204773755-0328c6cf-c544-4e68-b3a7-a1408735b4ab.png)
 
 * Try Again - Das Main-Game startet erneut
-* Main Menu - Rückkehr zum StartmenÜ
+* Main Menu - Rückkehr zum Startmenü
 
 ### Player Control
 
-Der Player kann mit der Steuerung sich fortbewegen, von Plattformen schwingen und Items einsammeln. Zudem kann er am Seil hochspringen. Einige dieser Aktionen werden durch Items beeinflusst und verbessert.
+Der Player kann sich mit der Steuerung fortbewegen, von Plattform zu Plattform schwingen und Items einsammeln. Zudem kann er sich sprunghaft dem Seil entlang hochziehen. Einige dieser Aktionen werden durch Items beeinflusst und verbessert.
 
 ### Team
 Max Decken, Colin Garms, Alexander Ehrenhöfer, Leah Sommer
