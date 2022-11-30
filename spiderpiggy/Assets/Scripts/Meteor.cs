@@ -56,6 +56,9 @@ public class Meteor : MonoBehaviour
     
     public void MeteorActivateTimeStop()
     {
-        StartCoroutine(MeteorActivateTimeStopCoroutine());
+        if (this != null)
+        {
+            StartCoroutine(MeteorActivateTimeStopCoroutine());
+        }
     }
 }

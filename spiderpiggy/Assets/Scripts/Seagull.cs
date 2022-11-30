@@ -70,7 +70,10 @@ public class Seagull : MonoBehaviour
     
     private void SeagullActivateTimeStop()
     {
-       StartCoroutine(SeagullActivateTimeStopCoroutine());
+        if (this != null)
+        {
+            StartCoroutine(SeagullActivateTimeStopCoroutine());
+        }
     }
 
     private void OnDoorwayOpen()

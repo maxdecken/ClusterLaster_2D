@@ -58,6 +58,9 @@ public class Drone : MonoBehaviour
     
     public void DroneActivateTimeStop()
     {
-        StartCoroutine(DroneActivateTimeStopCoroutine());
+        if (this != null)
+        {
+            StartCoroutine(DroneActivateTimeStopCoroutine());
+        }
     }
 }
