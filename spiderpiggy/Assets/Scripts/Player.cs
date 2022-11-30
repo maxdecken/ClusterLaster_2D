@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     {
         //Jump
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)){
-            if(jumpesInRow <= 4){
+            if(jumpesInRow <= 3){
                 playerRigidbody.AddForce(new Vector2(0f,  strenghtJump));
                 jumpesInRow++;
             }
@@ -48,6 +48,10 @@ public class Player : MonoBehaviour
         }
         else {
             playerAnimator.SetBool("isRolling", false);
+        }
+        //End Game if player presssed ESC
+        if(Input.GetKey(KeyCode.Escape)){
+            SceneManager.LoadScene("GameOver");
         }
     }
 

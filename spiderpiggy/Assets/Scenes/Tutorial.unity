@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1095,7 +1095,6 @@ MonoBehaviour:
   targetSprite: {fileID: 1491241258}
   target: {fileID: 1491241259}
   hook: {fileID: 1833369951140579848, guid: a4fff7ad4eabf0d43a8f333539c9562d, type: 3}
-  hitSquareBetween: {fileID: 1662651521}
 --- !u!114 &1294012887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,8 +1107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13df45ffea8a9a45914c2d361ebbb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreController: {fileID: 0}
-  itemController: {fileID: 0}
   playerRigidbody: {fileID: 1294012889}
   strenghtMove: 5
   strenghtJump: 10
@@ -6364,7 +6361,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1912126737
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
