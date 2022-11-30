@@ -6,6 +6,8 @@ SpiderPiggy ist ein 2D-Spiel für den Game-Engines Kurs des Studiengangs IMI an 
 
 ## Getting Started
 
+WICHTIG: Das Spiel ist für Windows (10 und 11) entwickelt und lässt sich auf dieser Plattform spielen.
+
 Um das Spiel zu Starten muss der Inhalt des Ornder <code>/builds</code> heruntergeladen und die darinbefindliche <code>SpiderPiggy.exe</code> gestartet werden.
 
 Viel Spaß beim spielen!
