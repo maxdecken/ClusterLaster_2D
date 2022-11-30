@@ -53,10 +53,10 @@ Wenn der Spieler mit dem Feuer am Boden ebenfalls in Behrührung kommt, heißt e
 Items verbessern die Situation des Spielers oder geben ihm Kräft, die seine Spielsituation verbessern.
 Es gibt folgende Items:
 
-<li>Apfel: Big Jump</li>
-<li>Karotte: Score-Booster</li>
-<li>Kartoffel: Invincibility</li>
-<li>Eisberg-Salat: Freeze Time (Enemies)</li>
+* Apfel: Big Jump
+* Karotte: Score-Booster
+* Kartoffel: Invincibility
+* Eisberg-Salat: Freeze Time (Enemies)
 
 
 ## Das Spiel
@@ -67,9 +67,9 @@ Zu Beginn des Spiels erscheint das Start Menü.
 
 ![grafik](https://user-images.githubusercontent.com/68195151/204773267-c47d8269-983f-46c3-b9e8-942706275c5d.png)
 
-<li>Start - Das Main-Game startet</li>
-<li>Tutorial - Das Tutorial startet</li>
-<li>Quit - Das Spiel wird beendet</li>
+* Start - Das Main-Game startet
+* Tutorial - Das Tutorial startet
+* Quit - Das Spiel wird beendet
 
 ### Main Game
 
@@ -84,8 +84,8 @@ Hier wird dem Spieler in einem Mini-Level die Steuerung erklärt.
 
 ![grafik](https://user-images.githubusercontent.com/68195151/204773624-5a265ff2-d1e3-41eb-98a6-0679afb37178.png)
 
-<li>Start - Das Main-Game startet</li>
-<li>Main Menu - Rückkehr zum Startmenu</li>
+* Start - Das Main-Game startet
+* Main Menu - Rückkehr zum Startmenu
 
 
 ### GameOver Menü 
@@ -94,8 +94,8 @@ Wenn der Player stirbt erscheint das Game-Over-Menü, hier wird der aktuell erri
 
 ![grafik](https://user-images.githubusercontent.com/68195151/204773755-0328c6cf-c544-4e68-b3a7-a1408735b4ab.png)
 
-<li>Try Again - Das Main-Game startet erneut</li>
-<li>Main Menu - Rückkehr zum Startmenu</li>
+* Try Again - Das Main-Game startet erneut
+* Main Menu - Rückkehr zum StartmenÜ
 
 ### Player Control
 
@@ -110,15 +110,15 @@ Software
 
 ### Resources
 #### Assets
-<li>Das SpeiderPiggy ist mit Dall-E (https://openai.com/dall-e-2/) generiert worden und dann händisch in Einzelteile aufgeteilt und geriggt worden.</li>
-<li>City: https://anokolisa.itch.io/sidescroller-shooter-central-city</li>
-<li>Food Icons: https://assetstore.unity.com/packages/2d/gui/icons/food-icons-pack-70018</li>
+* Das SpeiderPiggy ist mit Dall-E (https://openai.com/dall-e-2/) generiert worden und dann händisch in Einzelteile aufgeteilt und geriggt worden.
+* City: https://anokolisa.itch.io/sidescroller-shooter-central-city
+* Food Icons: https://assetstore.unity.com/packages/2d/gui/icons/food-icons-pack-70018
 
 #### Music
-<li>Game Soundtrack: https://pixabay.com/de/music/frohliche-kinderlieder-fun-happy-50s-pop-113298/</li>
+* Game Soundtrack: https://pixabay.com/de/music/frohliche-kinderlieder-fun-happy-50s-pop-113298/
 
-####Sounds
-<li>Item Sound 1: https://freesound.org/people/BloodPixelHero/sounds/591706/</li>
-<li>Item Sound 2: https://freesound.org/people/Mr._Fritz_/sounds/544015/</li>
-<li>Jump Sound: https://freesound.org/people/elektroproleter/sounds/157569/</li>
-<li>Walk Sound: https://freesound.org/people/movingplaid/sounds/76187/</li>
+#### Sounds
+* Item Sound 1: https://freesound.org/people/BloodPixelHero/sounds/591706/
+* Item Sound 2: https://freesound.org/people/Mr._Fritz_/sounds/544015/
+* Jump Sound: https://freesound.org/people/elektroproleter/sounds/157569/
+* Walk Sound: https://freesound.org/people/movingplaid/sounds/76187/
