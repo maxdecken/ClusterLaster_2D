@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     private Animator playerAnimator;
     private int jumpesInRow = 0;
+    private float jumpOffTimeStart = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,22 +30,40 @@ public class Player : MonoBehaviour
     {
         //Jump
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)){
-            if(jumpesInRow <= 3){
-                playerRigidbody.AddForce(new Vector2(0f,  strenghtJump));
-                jumpesInRow++;
+            //Limit Players max. y-velocity and y height to prevent to high jumpes
+            Vector3 playerVelocity = playerRigidbody.velocity;
+                if(playerVelocity.y <= 2 && gameObject.transform.position.y < 20){
+                //If more then 3 Jumps in a row the next jump can be executed one sec. after
+                if(jumpOffTimeStart != 0 && Time.time - jumpOffTimeStart > 1.5f){
+                    jumpOffTimeStart = 0;
+                    jumpesInRow = 0;
+                }
+                if(jumpesInRow <= 3){
+                    playerRigidbody.AddForce(new Vector2(0f,  strenghtJump));
+                    jumpesInRow++;
+                    if(jumpesInRow > 3){
+                        jumpOffTimeStart = Time.time;
+                    }
+                }
             }
         }
         //Move Left
         if(Input.GetKey(KeyCode.A)){
-            playerRigidbody.AddForce(new Vector2(-strenghtMove, 0f), forceModeMovement);
-            jumpesInRow = 0;
-            playerAnimator.SetBool("isRolling", true);
+            //Limit Players max. x-velocity to prevent "flying" in the scene
+            Vector3 playerVelocity = playerRigidbody.velocity;
+                if(playerVelocity.x <= 7.5){
+                    playerRigidbody.AddForce(new Vector2(-strenghtMove, 0f), forceModeMovement);
+                    playerAnimator.SetBool("isRolling", true);
+                }
         }
         //Move Right
         else if(Input.GetKey(KeyCode.D)){
-            playerRigidbody.AddForce(new Vector2(strenghtMove, 0f), forceModeMovement);
-            jumpesInRow = 0;
-            playerAnimator.SetBool("isRolling", true);
+            //Limit Players max. x-velocity to prevent "flying" in the scene
+            Vector3 playerVelocity = playerRigidbody.velocity;
+                if(playerVelocity.x <= 7.5){
+                    playerRigidbody.AddForce(new Vector2(strenghtMove, 0f), forceModeMovement);
+                    playerAnimator.SetBool("isRolling", true);
+                }
         }
         else {
             playerAnimator.SetBool("isRolling", false);

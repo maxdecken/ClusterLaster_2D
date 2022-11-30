@@ -3987,7 +3987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 1835051743}
-  strenghtMove: 8
+  strenghtMove: 4
   strenghtJump: 250
   powerUpDurationValue: 10
   forceModeMovement: 0
