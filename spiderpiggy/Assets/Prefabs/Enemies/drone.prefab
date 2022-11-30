@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2864524762660670857}
   - component: {fileID: 2864524762660670856}
   - component: {fileID: -4473996687690586191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: drone
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71981edd6fad51647ad456e6a42b22a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -3
+  freezeDurationValue: 10
+  xVelocity: -3
+  yVelocity: 4

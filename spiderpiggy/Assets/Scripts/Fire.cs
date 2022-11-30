@@ -18,7 +18,6 @@ public class Fire : MonoBehaviour
   }
 
 private void OnTriggerEnter2D(Collider2D other){
-  Debug.Log(other.gameObject.name);
   if(other.gameObject.name == player.gameObject.name){
     SceneManager.LoadScene("GameOver");
   }

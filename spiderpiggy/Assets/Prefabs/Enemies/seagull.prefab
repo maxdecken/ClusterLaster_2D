@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5206869299084352756}
   - component: {fileID: 5109019375226694885}
   - component: {fileID: 8182994663498737008}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: seagull
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -39,8 +39,7 @@ public class Drone : MonoBehaviour
             {
                 Destroy(other.transform.parent.gameObject);
             }
-
-            Debug.Log("GETROFFEN");
+            
         }
     }
     

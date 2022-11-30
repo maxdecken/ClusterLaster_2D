@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2864524762660670857}
   - component: {fileID: 2864524762660670856}
   - component: {fileID: -864124440415976127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meteor
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f4d379b34a87d4cafad9d8c99fd411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
+  freezeDurationValue: 10
+  xVelocity: -2
   gravitySpeed: -10
-  rotateSpeed: 100

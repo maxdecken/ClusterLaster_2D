@@ -38,7 +38,6 @@ public class Meteor : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(other.transform.parent.gameObject);
-            Debug.Log("GETROFFEN");
         }
     }
     

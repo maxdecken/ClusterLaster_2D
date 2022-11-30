@@ -19,6 +19,7 @@ public class HookAnchor : MonoBehaviour
     
     private BoxCollider2D playerHitBox;
     private Vector3 targetPosition;
+    private int layermaskToAvoid;
     private int layermaskToHit;
 
     private Animator playerAnimator;
@@ -28,6 +29,7 @@ public class HookAnchor : MonoBehaviour
     void Start()
     {
         playerHitBox = GetComponent<BoxCollider2D>();
+        layermaskToAvoid = 1<< LayerMask.NameToLayer("Obstacles");
         layermaskToHit = 1 << LayerMask.NameToLayer("Hookable");
         playerAnimator = GetComponent<Animator>();
     }
@@ -39,8 +41,8 @@ public class HookAnchor : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
-
-            if (ropeIsActive == false && hookAble)
+            RaycastHit2D hitAvoid = Physics2D.Raycast(transform.position, targetPosition - transform.position, maxDistance, layermaskToAvoid);
+            if (ropeIsActive == false && hookAble && hitAvoid.collider == null)
             {
                 currentHook = (GameObject) Instantiate(hook, transform.position, Quaternion.identity);
 
@@ -91,9 +93,6 @@ public class HookAnchor : MonoBehaviour
         var ray = new Ray2D(transform.position, targetPosition);
         
         RaycastHit2D hit = Physics2D.Raycast(transform.position, targetPosition - transform.position, maxDistance, layermaskToHit);
-        
-        Debug.DrawLine(transform.position,targetPosition);
-        
         
         if (hit.collider != null)
         {

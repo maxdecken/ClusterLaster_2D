@@ -7,7 +7,7 @@ using System.Linq;
 
 public class Rope : MonoBehaviour
 {
-    [SerializeField] float speed = 0.6f;
+    [SerializeField] float speed = 0.8f;
     [SerializeField] float distance = 1.8f;
 
     [SerializeField] GameObject RopePivotPrefab;
@@ -69,8 +69,7 @@ public class Rope : MonoBehaviour
             
             RopePivot.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,  vectorToHook.y*20));
             playerRigidbody.AddForce(new Vector2(-vectorToHook.x*30,  vectorToHook.y*30));
-            //lastRopePivot.distance 
-           
+
         }   
         
     }

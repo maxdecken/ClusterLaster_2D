@@ -52,7 +52,6 @@ public class Seagull : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(other.transform.parent.gameObject);
-            Debug.Log("GETROFFEN");
         }
     }
     
@@ -60,11 +59,9 @@ public class Seagull : MonoBehaviour
     {
         xFreeze = xVelocity;
         yFreeze = yVelocity;
-        Debug.Log("Time is frozen");
         yield return new WaitForSeconds(freezeDurationValue);
         xFreeze = 0;
-        yFreeze = 0;  
-        Debug.Log("You are not frozen!"); 
+        yFreeze = 0;
         GameEventManager.current.OnItemTriggerEnter -= a;
     }
     
