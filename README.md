@@ -75,7 +75,8 @@ Zu Beginn des Spiels erscheint das Start Menü.
 
 Das Herzstück des Spiels: das Endlessrunner-Spiel das sich automatisch und zufällig erweitert. Hier geht es darum den hächsten Score zu sammeln und nicht zu sterben. Ins Feuerfallen oder die "ESC"-Taste drücken beendet das Spiel.
 
-![grafik](https://user-images.githubusercontent.com/68195151/204773527-6bc8183b-45e2-4b4e-9ac0-7c0713c0336a.png)
+![grafik](https://user-images.githubusercontent.com/68195151/204862896-e4f63271-089c-4085-9fc9-c3c930ae9225.png)
+![grafik](https://user-images.githubusercontent.com/68195151/204863417-930feb32-66b9-4296-91a4-81af09f4d1a1.png)
 
 ### Tutorial Level
 
