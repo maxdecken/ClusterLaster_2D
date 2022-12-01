@@ -113,6 +113,7 @@ Software
 * Das SpeiderPiggy ist mit Dall-E (https://openai.com/dall-e-2/) generiert worden und dann händisch in Einzelteile aufgeteilt und geriggt worden.
 * Die Möwe wurde ebenfalls mit Dall-E (https://openai.com/dall-e-2/) generiert und in Photoshop in mehrere Tiles umgesetzt.
 * Drohne: https://craftpix.net/freebies/free-drones-pack-pixel-art/
+* Meteor: https://kenney.nl/assets/space-shooter-redux
 * City: https://anokolisa.itch.io/sidescroller-shooter-central-city
 * Food Icons: https://assetstore.unity.com/packages/2d/gui/icons/food-icons-pack-70018
 
