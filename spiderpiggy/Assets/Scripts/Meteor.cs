@@ -37,7 +37,10 @@ public class Meteor : MonoBehaviour
         if (other.gameObject.CompareTag("Rope"))
         {
             Destroy(other.gameObject);
-            Destroy(other.transform.parent.gameObject);
+            if (other.transform.parent.gameObject)
+                        {
+                            Destroy(other.transform.parent.gameObject);
+                        }
         }
     }
     

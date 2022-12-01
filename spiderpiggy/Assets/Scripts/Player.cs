@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
     //[SerializeField] private ItemCounterController itemController = null;
     [SerializeField] private Rigidbody2D playerRigidbody = null;
-    [SerializeField] private float strenghtMove = 10;
+    [SerializeField] private float strenghtMove = 12;
     [SerializeField] private float strenghtJump = 20;
     [SerializeField] private float powerUpDurationValue = 10;
     [SerializeField] private ForceMode2D forceModeMovement = ForceMode2D.Force;
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)){
             //Limit Players max. y-velocity and y height to prevent to high jumpes
             Vector3 playerVelocity = playerRigidbody.velocity;
-                if(playerVelocity.y <= 2 && gameObject.transform.position.y < 20){
+                if(playerVelocity.y <= 2 && gameObject.transform.position.y < 22){
                 //If more then 3 Jumps in a row the next jump can be executed one sec. after
                 if(jumpOffTimeStart != 0 && Time.time - jumpOffTimeStart > 1.5f){
                     jumpOffTimeStart = 0;
