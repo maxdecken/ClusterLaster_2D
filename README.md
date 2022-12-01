@@ -111,6 +111,8 @@ Software
 ### Resources
 #### Assets
 * Das SpeiderPiggy ist mit Dall-E (https://openai.com/dall-e-2/) generiert worden und dann händisch in Einzelteile aufgeteilt und geriggt worden.
+* Die Möwe wurde ebenfalls mit Dall-E (https://openai.com/dall-e-2/) generiert und in Photoshop in mehrere Tiles umgesetzt.
+* Drohne: https://craftpix.net/freebies/free-drones-pack-pixel-art/
 * City: https://anokolisa.itch.io/sidescroller-shooter-central-city
 * Food Icons: https://assetstore.unity.com/packages/2d/gui/icons/food-icons-pack-70018
 
@@ -122,3 +124,6 @@ Software
 * Item Sound 2: https://freesound.org/people/Mr._Fritz_/sounds/544015/
 * Jump Sound: https://freesound.org/people/elektroproleter/sounds/157569/
 * Walk Sound: https://freesound.org/people/movingplaid/sounds/76187/
+
+#### Code
+* Für den LineRenderer des Seils wurde sich an einem Tutorial orientiert (https://www.youtube.com/watch?v=BXTjsCERdsw&ab_channel=DonHaulGameDev-Wabble-UnityTutorials)   Zugrif am 13.12.2022, 16:34 Uhr
