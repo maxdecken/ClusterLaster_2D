@@ -35,7 +35,7 @@ public class Drone : MonoBehaviour
         if (other.gameObject.CompareTag("Rope"))
         {
             Destroy(other.gameObject);
-            if (other.transform.parent.gameObject)
+            if (other.transform.parent.gameObject != null)
             {
                 Destroy(other.transform.parent.gameObject);
             }
