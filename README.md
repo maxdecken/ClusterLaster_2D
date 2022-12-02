@@ -82,7 +82,7 @@ Das Herzstück des Spiels: Die sich automatisch / zufällig während dem Gamepla
 
 Hier wird dem Spieler in einem Mini-Level die Steuerung erklärt.
 
-![grafik](https://user-images.githubusercontent.com/68195151/204773624-5a265ff2-d1e3-41eb-98a6-0679afb37178.png)
+![grafik](https://user-images.githubusercontent.com/68195151/205256954-2ae90333-2e44-4153-8ee7-3145107c485f.png)
 
 * Start - Das Main-Game startet
 * Main Menu - Rückkehr zum Startmenu
