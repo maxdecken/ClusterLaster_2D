@@ -8,7 +8,7 @@ SpiderPiggy ist ein 2D-Spiel für den Game-Engines Kurs des Studiengangs IMI an 
 
 WICHTIG: Das Spiel ist für Windows (10 und 11) entwickelt und lässt sich ausschließlich auf dieser Plattform spielen.
 
-Um das Spiel zu starten muss der Inhalt des Ornder <code>/builds/windows</code> heruntergeladen und die darinbefindliche <code>SpiderPiggy.exe</code> gestartet werden.
+Um das Spiel zu starten muss entweder das letzte Release oder der Inhalt des Ornder <code>/builds/windows</code> heruntergeladen und die darinbefindliche <code>SpiderPiggy.exe</code> gestartet werden.
 
 Viel Spaß beim spielen!
 
@@ -17,6 +17,8 @@ Viel Spaß beim spielen!
 Bei unserem 2d Sidescroller Game geht es darum, so viele Items wie möglich einzusammeln. 
 Dabei muss man sich an einem Seil von Plattform zu Plattform schwingen und darf dabei nicht in das tötliche Feuer fallen.
 Unser Game ist ein Endlessrunner bei welchem es stets gilt den momentanen Highscore zu knacken, welcher einem jeweils am Ende eines Runs präsentiert wird.  
+
+https://user-images.githubusercontent.com/68195151/205307716-fbb34aa1-1c5d-4df2-a040-04e71538d655.mp4
 
 ### Genre & Art Style
 2D Sidescroller, Platformer, Endlessrunner
