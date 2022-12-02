@@ -1,6 +1,6 @@
 # ClusterLaster: SpiderPiggy (2D-Game)
 
-![grafik](https://github.com/maxdecken/ClusterLaster_2D/blob/main/spiderpiggy/Assets/Images/branding/wordart.png)
+<img src="https://github.com/maxdecken/ClusterLaster_2D/blob/main/spiderpiggy/Assets/Images/branding/wordart.png" height="300px"/>
 
 SpiderPiggy ist ein 2D-Spiel für den Game-Engines Kurs des Studiengangs IMI an der HTW-Berlin im Wintersemster 22/23.
 
