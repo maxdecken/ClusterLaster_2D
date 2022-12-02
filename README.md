@@ -101,6 +101,12 @@ Wenn der Player stirbt erscheint das Game-Over-Menü. Hier wird der aktuell erre
 
 Der Player kann sich mit der Steuerung fortbewegen, von Plattform zu Plattform schwingen und Items einsammeln. Zudem kann er sich sprunghaft dem Seil entlang hochziehen. Einige dieser Aktionen werden durch Items beeinflusst und verbessert.
 
+Tasten:
+A & D: Nach links bzw. rechts bewegen / schwingen
+Q: Am Seil hochziehen
+Leertaste & W: Springen -> Mehrere Sprünge sind möglich, Sprung kann auch in der Luft verwendet werden. Nach drei Srpüngen setzt eine Cooldown-Zeit ein.
+Linker Mausklick: An der Wand in Richtung des Maus-Icons wird ein Haken platziert, um das Seil zu spannen. In freier Luft kann kein Haken gesetzt werden. Wenn bereits ein Seil gespannt ist, wird mit einem weiteren Mausklick das Seil entfernt. 
+
 ### Team
 Max Decken, Colin Garms, Alexander Ehrenhöfer, Leah Sommer
 
